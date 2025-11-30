@@ -237,8 +237,11 @@ function answer(){
             score_text.style.color = "#0000ff";
         } else if(combo < 14){
             score_text.style.color = "#00ff00";
-        } else {
+        } else if(combo < 19){
             score_text.style.color = "#ff0000";
+        } else{
+            score_text.style.color = "#FFD700";
+            score_text.style.textShadow = "1px 1px 0 #B8860B,-1px -1px 0 #B8860B,0 0 2px #FFF8DC";
         }
         result_text_text.innerHTML = souri_list[1][0] + "代目総理大臣は...<br><span class=bold>" + souri_list[1][1] + "</span>です。"
     }
