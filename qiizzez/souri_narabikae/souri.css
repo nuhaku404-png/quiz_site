@@ -1,5 +1,10 @@
 /* ===== 時代表示 ===== */
+#score {
+    height: 15px;
+}
+
 #era {
+    margin-top: 15px;
     font-size: 20px;
     text-align: center;
     margin-bottom: 15px;

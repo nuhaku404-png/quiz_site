@@ -174,6 +174,7 @@ souri = [
 
 window.onload = start_game;
 
+const score_text = document.getElementById("score")
 const era_text = document.getElementById("era")
 const pre_generation_text = document.getElementById("pre_generation")
 const pre_president_text = document.getElementById("pre_president")
@@ -189,6 +190,9 @@ const result_text_text = document.getElementById("result_text")
 const one_more_button = document.getElementById("one_more")
 
 let answer_president = "";
+let correct = 0;
+let count = 0;
+let combo = 0;
 
 answer_button.addEventListener("click",answer);
 one_more_button.addEventListener("click",start_game);
@@ -217,9 +221,24 @@ function answer(){
         before_result_area.style.display = "none";
         after_result_area.style.display = "block";
         if(president_answer.value == answer_president){
+            count += 1;
+            correct += 1;
+            combo += 1;
             result_text.innerHTML = "正解";
         } else {
+            count += 1;
+            combo = 0;
             result_text.innerHTML = "不正解";
+        }
+        score_text.innerHTML = count + "問中" + correct + "問正解(" + (correct / count * 100).toFixed(0) + "％)";
+        if(combo < 4){
+            score_text.style.color = "#000000";
+        } else if(combo < 9){
+            score_text.style.color = "#0000ff";
+        } else if(combo < 14){
+            score_text.style.color = "#00ff00";
+        } else {
+            score_text.style.color = "#ff0000";
         }
         result_text_text.innerHTML = souri_list[1][0] + "代目総理大臣は...<br><span class=bold>" + souri_list[1][1] + "</span>です。"
     }
