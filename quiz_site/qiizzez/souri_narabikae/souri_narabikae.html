@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>内閣総理大臣並び替え</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="souri.css">
+</head>
+<body>
+    <div class="header"><h1>内閣総理大臣 穴埋めクイズ</h1></div>
+    <div class="main">
+        <div id="era"></div>
+        <div class="question">
+            <table>
+                <tr>
+                    <td id="pre_generation"></td>
+                    <td id="pre_president"></td>
+                </tr>
+                <tr>
+                    <td id="generation"></td>
+                    <td><div><input id="president"></div></td>
+                </tr>
+                <tr>
+                    <td id="pro_generation"></td>
+                    <td id="pro_president"></td>
+                </tr>
+            </table>
+        </div>
+        <div id="before_result">
+            <button id="answer">回答</button>
+        </div>
+        <div id="after_result">
+            <div id="result"></div>
+            <div id="result_text"></div>
+            <button id="one_more">もう一問</button>
+            <button id="ToIndex">トップへ戻る</button>
+        </div>
+    </div>
+    <div class="footer"></div>
+    <script src="souri_narabikae.js"></script>
+    <script src="../../js/main.js"></script>
+</body>
+</html>
