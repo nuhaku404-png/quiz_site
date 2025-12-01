@@ -231,11 +231,11 @@ function answer(){
             result_text.innerHTML = "不正解";
         }
         score_text.innerHTML = count + "問中" + correct + "問正解(" + (correct / count * 100).toFixed(0) + "％)";
-        if(combo < 4){
+        if(combo < 3){
             score_text.style.color = "#000000";
-        } else if(combo < 9){
+        } else if(combo < 6){
             score_text.style.color = "#0000ff";
-        } else if(combo < 14){
+        } else if(combo < 12){
             score_text.style.color = "#00ff00";
         } else if(combo < 19){
             score_text.style.color = "#ff0000";
